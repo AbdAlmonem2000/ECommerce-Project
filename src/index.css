@@ -1,0 +1,144 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+:root
+{
+    
+    --main-color:#0aad0a;
+    --light-color:#f0f3f2;
+    --shadow: rgba(145,158,171,.2) 0px 2px 4px -1px,rgba(145,158,171,.14) 0px 4px 5px 0px,rgba(145,158,171,.12) 0px 1px 10px 0px;
+    --font-family:'Encode Sans Expanded', sans-serif;
+    --rating-color:#ffc908;
+}
+
+body{
+
+    font-family: var(--font-family) !important;
+}
+.rating-color
+{
+    color: var(--rating-color);
+}
+.cursor-pointer
+{
+    cursor: pointer;
+}
+a , a:hover{
+    text-decoration: none;
+}
+
+.btn{
+     
+    @apply px-4 py-2 mt-4 w-full rounded-lg text-white bg-green-600
+
+}
+.product .btn 
+{
+    transition: transform 1s , opacity 1s;
+    transform: translateY(100%);
+    opacity: 0;
+}
+.product:hover .btn 
+{
+    opacity: 1;
+    transform: translateY(0%);
+
+}
+.font-sm
+{
+    font-size: 14px;
+}
+.text-main
+{
+    color: var(--main-color);
+}
+.bg-main
+{
+    background-color: var(--main-color) !important;
+}
+.bg-main-light 
+{
+    background-color: var(--light-color) !important;
+}
+
+.row{
+
+    @apply flex flex-wrap  px-4 items-center justify-center
+}
+.active{
+    border-bottom: 2px solid var(--main-color);
+    padding-bottom: 5px;
+    
+    
+}
+img{
+    @apply w-full h-full rounded-md object-fill
+}
+.h-image{
+    height: 250px;
+    /* padding: 8px;    */
+}
+
+.loader{
+    display: block;
+    position: relative;
+    height: 32px;
+    width: 200px;
+    background: #fff;
+    border:2px solid #fff;
+    color: green;
+    overflow: hidden;
+  }
+  .loader::before{
+    content: '';
+    background: green;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    animation: loading 10s linear infinite;
+  }
+  .loader:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 32px;
+    color: rgb(0,255,255);
+    mix-blend-mode: difference;
+    animation: percentage 10s linear infinite;
+  }
+  
+  @keyframes loading {
+    0% { width: 0 }
+    100% { width: 100% }
+  }
+  @keyframes percentage {
+    0% { content: "0%"}
+    5% { content: "5%"}
+    10% { content: "10%"}
+    20% { content: "20%"}
+    30% { content: "30%"}
+    40% { content: "40%"}
+    50% { content: "50%"}
+    60% { content: "60%"}
+    70% { content: "70%"}
+    80% { content: "80%"}
+    90% { content: "90%"}
+    95% { content: "95%"}
+    96% { content: "96%"}
+    97% { content: "97%"}
+    98% { content: "98%"}
+    99% { content: "99%"}
+    100% { content: "100%"}
+  }
+  
+  
